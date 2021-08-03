@@ -37,7 +37,7 @@
   
 * Dirección MAC de la tarjeta wifi: 28-CD-C4-6B-0C-81 
 * Dirección IP (Interna, del router): 192.168.1.1
-* Dirección IP (Externa, del ISP): 200.28.4.129
+* Dirección IP (Externa, del ISP): 181.161.205.4 
 * Proveedor internet: Telefónica chile S.A
 
 
