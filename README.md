@@ -35,7 +35,7 @@
   * Sistema de archivos: NTFS,NTFS
 
   
-* Dirección MAC de la tarjeta wifi: 28-CD-C4-6B-0C-81 
+* Dirección MAC de la tarjeta wifi: 28-CD-C4-6B-0C-** (relleno con asteriscos por privecidad, porque estoy casi seguro de que la nasa está tras mis pasos) 
 * Dirección IP (Interna, del router): 192.168.1.1
 * Dirección IP (Externa, del ISP): 181.161.205.4 
 * Proveedor internet: Telefónica chile S.A
