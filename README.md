@@ -40,6 +40,16 @@
 * Dirección IP (Externa, del ISP): 181.161.205.4 
 * Proveedor internet: Telefónica chile S.A
 
+**DESEMPEÑO MATMUL**
 
-
-
+![Figure_1](https://user-images.githubusercontent.com/88339083/128527683-968d27c8-e2a1-4484-abaf-aeb1bd255a37.png)
+1.-El gráfico difiere en que : 
+           pc  del ayudante/profesor tiene 10gb ram y yo tengo 8gb  ram
+           grafican 24  valores  entre 0 y 10000 (que determinan que tan grandes sonn las matrices que se estan multiplicando)  yo solo grafico 16 (entre 0 y  6500) porque sino se demora demaciado.
+2. Las diferencias en los tiempos de cada corrida se debe a que "otra funcion está ejecutando el computador" puesto que  toda acción y orden realizada o recibida, respectivamente, por el ordenador se  graduará y ejecutará según su nivel de urgencia(en otras palabras, el pc prioriza realizar ciertas operaciones, por tanto  según la prioridad de la acción será cuanto se demore en realizarla.
+3. el gráfico de uso de memoria es lineal puesto que representa el espacio que usa en la memoria la matriz generada, por tanto entre mas grande la matriz, mas grande será el espacio que usa.  Mientras que el tiempo  transcurrido no lo es por la razón mencionada en el punto 2).
+4. Uso el PYTHON 3.9.6(64bits)
+5. Numpy versión  1.21.1
+6.![image](https://user-images.githubusercontent.com/88339083/128532899-3157f791-f4ae-4258-90b3-a2f8ae0a2f10.png)
+Corrí el programa 10 veces por separado, por  tanto el estado de la cpu correspondiente a la ejecucion del código corresponde a cuando alcanza su máximo en los 4 procesadores  y  8 procesadores lógicos.
+           
