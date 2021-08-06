@@ -51,5 +51,4 @@
 4. Uso el PYTHON 3.9.6(64bits)
 5. Numpy versión  1.21.1
 6.![image](https://user-images.githubusercontent.com/88339083/128532899-3157f791-f4ae-4258-90b3-a2f8ae0a2f10.png)
-Corrí el programa 10 veces por separado, por  tanto el estado de la cpu correspondiente a la ejecucion del código corresponde a cuando alcanza su máximo en los 4 procesadores  y  8 procesadores lógicos
-           
+Corrí el programa 10 veces por separado, por  tanto el estado de la cpu correspondiente a la ejecucion del código corresponde a cuando alcanza su máximo utilizando los 2 hilos de cada uno de los 4 nucleos, utilizando un total de 8 procesadores lógicos. (o 4 procesadores fiscos de dos hilos c/u).
