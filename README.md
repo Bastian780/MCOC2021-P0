@@ -41,5 +41,3 @@
 * Proveedor internet: Telefónica chile S.A
 
 
-
-
