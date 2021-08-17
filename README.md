@@ -56,3 +56,9 @@
 6.![image](https://user-images.githubusercontent.com/88339083/128532899-3157f791-f4ae-4258-90b3-a2f8ae0a2f10.png)
 Corrí el programa 10 veces por separado, por  tanto el estado de la cpu correspondiente a la ejecucion del código corresponde a cuando alcanza su máximo utilizando los 2 hilos de cada uno de los 4 nucleos, utilizando un total de 8 procesadores lógicos. (o 4 procesadores fiscos de dos hilos c/u).
 >>>>>>> 0487218469bcdb34b0bf5ff0f63af70636a360ec
+
+***DESEMPEÑO  INVERSIÓN DE MATRIZ A, USANDO SCIPY.LINALG Y NUMPY.LINALG*** 
+1.-DESEMPEÑO DE SCIPY.LANALG Y NUMPY.LINALG PARA TAMAÑO CRECIENTE DE MATRICES:
+CON EL OBJETIVO DE ANILZAR Y COMPARAR EL DESEMPEÑO, SE GENERARON 60  ARCHIVOS QUE CONTIENEN  (TAMAÑO DE MATRIZ, TIEMPO DE INVERSIÓN DE A, BYTS TOTALES UTILIZADOS), PARA LUEGO GRAFICAR Y COMPARAR VISUALMENTE LO OBTENIDO. 
+LOS ARCHIVOS FUERON GENERADOS CON LOS CODIGOS  SCIPY.LINALG.INV_8_16_32_64BITS.PY Y NUMPY.LINALG.INV_8_16_32_64BITS.PY, PARA LUEGO SER GRAFICADOS CON  GENERACION_DE_GRAFICOS.PY OBTENIENDO LO SIGUIENTE:
+
