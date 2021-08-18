@@ -64,7 +64,7 @@ LOS ARCHIVOS FUERON GENERADOS CON LOS CODIGOS  SCIPY.LINALG.INV_8_16_32_64BITS.P
 ![Rendimiento_invA_scipy_half](https://user-images.githubusercontent.com/88339083/129815687-c2e98c8c-886a-45f2-a0c6-3d1da76bcc34.png)![Rendimiento_invA_scipy_float16](https://user-images.githubusercontent.com/88339083/129815745-f185d4c7-e18f-4036-8f64-fd15c5f19d3b.png)
 
 
-![Uploading Rendimiento_invA_scipy_float16.png…]()
+
 
 
 ![Rendimiento_invA_scipy_float32](https://user-images.githubusercontent.com/88339083/129815754-a60fb95c-951e-4304-b46e-18a80853b357.png)
