@@ -61,4 +61,21 @@ Corrí el programa 10 veces por separado, por  tanto el estado de la cpu corresp
 1.-DESEMPEÑO DE SCIPY.LANALG Y NUMPY.LINALG PARA TAMAÑO CRECIENTE DE MATRICES:
 CON EL OBJETIVO DE ANILZAR Y COMPARAR EL DESEMPEÑO, SE GENERARON 60  ARCHIVOS QUE CONTIENEN  (TAMAÑO DE MATRIZ, TIEMPO DE INVERSIÓN DE A, BYTS TOTALES UTILIZADOS), PARA LUEGO GRAFICAR Y COMPARAR VISUALMENTE LO OBTENIDO. 
 LOS ARCHIVOS FUERON GENERADOS CON LOS CODIGOS  SCIPY.LINALG.INV_8_16_32_64BITS.PY Y NUMPY.LINALG.INV_8_16_32_64BITS.PY, PARA LUEGO SER GRAFICADOS CON  GENERACION_DE_GRAFICOS.PY OBTENIENDO LO SIGUIENTE:
+![Rendimiento_invA_scipy_half](https://user-images.githubusercontent.com/88339083/129815687-c2e98c8c-886a-45f2-a0c6-3d1da76bcc34.png)![Rendimiento_invA_scipy_float16](https://user-images.githubusercontent.com/88339083/129815745-f185d4c7-e18f-4036-8f64-fd15c5f19d3b.png)
+
+
+![Uploading Rendimiento_invA_scipy_float16.png…]()
+
+
+![Rendimiento_invA_scipy_float32](https://user-images.githubusercontent.com/88339083/129815754-a60fb95c-951e-4304-b46e-18a80853b357.png)
+
+
+![Rendimieno_scipy_float64](https://user-images.githubusercontent.com/88339083/129815800-242667bc-e0d7-48fe-93dc-ad22bf1917bb.png)
+
+**EL PROGRAMA  NUMPY.LINALG.INV_8_16_32_64BITS.PY NO FUE CAPAS DE RESOLVER LA INVERSIÓN PARA DTYPE=HALF Y 16BITS**
+LA RAZÓN DE ESTO SE DEBE A  LIBRERIA
+
+
+
+
 
