@@ -112,7 +112,7 @@ LA UTILIZACIÓN DE CPU DURANTE EL PROCESO FUE DEL 100%, MIENTRAS QUE DE LA DE ME
 
 
 ¿Qué algoritmo de inversión cree que utiliza cada método (ver wiki)? Justifique claramente su respuesta. 
-SE CREE QUE EL MÉTODO UTILIZADO ES  EL DE VECTORES DE BASES RECÍPROCAS Y EL USO DE USO DE LA MATRIZ IDENTIDAD
+ambos utilizan el método gauss jordan
 
 ¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? Justifique su comentario en base al uso de procesadores y memoria observado durante las corridas. 
 INCIDE EN QUE EL COMPUTADOR JERAQUIZA LAS TAREAS QUE UNO LE ORDENA  Y VA REALIZANDO SEGÚN SU PRIORIDAD. POR TANTO, EL PARALELISMO PUEDE FAVORECER O PERJUDICAR EL RENDIMIENTO DEL COMPUTADOR SEGÚN LA LISTA DE "TAREAS" PENDIENTES.
