@@ -77,13 +77,42 @@ SCIPY ES UNA LIBRERÍA CON MUCH MÁS ALCANCE QUE NUMPY, DE HECHO ESTA ÚLTIMA  E
 ![Rendimiento_invA_Numpy_float32](https://user-images.githubusercontent.com/88339083/129973894-2a968227-f89c-4aaf-b4d7-7924146b1864.png)
 
 ![Rendimiento_invA_numpy_float64](https://user-images.githubusercontent.com/88339083/129973904-87a9b6a8-aafc-43cd-875f-96817177e623.png)
+LUEGO DE GRAFICAR LO OBTENIDO, SE OBSERVA QUE A TIPO DE DATOS, SCIPY ES MUCHO MAS EFICIENTE QUE NUMPY PUESTO QUE HACE POSIBLE TRABAJAR CON LOS 4 EVALUADOS.  MIENTRAS QUE A  USO DE MEMORIA  SE OBSERVA ALGO SIMILAR, PERO EN CUANTO A TIEMPO TRANSCURRIDO, LO TARDADO POR SCIPY AL AUMENTAR EL TAMAÑO DE LA MATRIZ TIENE UN COMPORTAMIENTO MUCHO MAS ESTABLE QUE NUMPY.
+
+2.-USO  OVERWRITE_A=TRUE
+EL USO DEL OVERWRIITE_A=TRUE EFICTIVAMENTE RESULTA COMO GANANCIA DE  DESEMPEÑO PUESTO QUE PERMITE REESCRIBIR SOBRE DATOS YA EXISTENTES, SIN LA NECESIDAD DE UTILIZAR MÁS ESPACIO  PARA NUEVOS DATOS.
+
+3.-TAMAÑO EN MEMORIA DE LOS DTYPES
+LOS TAMAÑOS  EN MEMORIA DE CADA TIPO DE DATO SON:
+1.- HALF= 1BYTS=8BITS
+2.- SINGLE= 2BYTS=16BITS
+3.-DOUBLE=4BYTS=32BITS
+4.-LONG DOUBLE=8BYTS=64BITS
+
+4.-EFICIENCIA CON NUMPY.LINALG.INV, SCIPY.LINALG.OVERWRITE_A=TRUE Y SCIPY.LANLG.OVERWRITE_A=FALSE
+
+PARA ANALIZAR LA EFICIENCIA, SE PROGRAMÓ Y GRAFICÓ CADA CASO OBTENIENDO LO SIGUIENTE
+![Rendimiento_invA_scipy_overwrite_a=False_half](https://user-images.githubusercontent.com/88339083/129988539-fe289f70-c58c-450a-b73a-b82730f6f3c9.png)
+![Rendimiento_invA_scipy_overwrite_a=False_float16](https://user-images.githubusercontent.com/88339083/129988551-de13ac0f-5397-4680-aa31-7c15946c85a5.png)
+![Rendimiento_invA_scipy_overwrite_a=False_float32](https://user-images.githubusercontent.com/88339083/129988559-c9bdad72-a381-4d80-8b61-3d07fff699c0.png)
+![Rendimiento_invA_scipy_overwrite_a=False_float64](https://user-images.githubusercontent.com/88339083/129988570-abee910e-5e3b-48fe-bde8-0e79304a1760.png)
+![Rendimiento_invA_scipy_overwrite_a=True_half](https://user-images.githubusercontent.com/88339083/129988604-a33fd4a9-5d92-4f17-a72f-4bd49e487714.png)
+![Rendimiento_invA_scipy_overwrite_a=True_float16](https://user-images.githubusercontent.com/88339083/129988619-9a7a5408-9580-4998-8f9c-7143f1a37b6d.png)
+![Rendimiento_invA_scipy_overwrite_a=True_float32](https://user-images.githubusercontent.com/88339083/129988629-2a6c7e13-c410-4b3e-b136-0f7a7ec4889d.png)
+![Rendimiento_invA_scipy_overwrite_a=True_float64](https://user-images.githubusercontent.com/88339083/129988642-ea9da0b2-78d8-428e-866e-68798435341f.png)
+CONCLUYENDO QUE EN CUANTO A EFICIENCIA, EL RANKING CORRESPONDE AL SIGUIENTE:
+1.-SCIPY.LINALG.OVERWRITE_A=TRUE
+2.-SCIPY.LINALG.OVERWRITE_A=FALSE
+3.-NUMPY.LINALG.INV
+PUESTO QUE WRITE_A=TRUE OPTIMIZA ESPACIO REESCRIBIENDO SOBRE ARCHIVOS EXISTENTES, WRITE_A=FALSE SI BIEN UTILIZA MÁS ESPACIO, SU RENDIMIENTO SIGUE SIENDO MÁS ESTABLE QUE EL DE NUMPY.LINALG Y TAMBIEN FUNCIONA CON TODOS LOS DTYPES (NUMPY NO).
+
+LA UTILIZACIÓN DE CPU DURANTE EL PROCESO FUE DEL 100%, MIENTRAS QUE DE LA DE MEMORIA FUE DEL 65%
+![image](https://user-images.githubusercontent.com/88339083/129989059-91b83ff3-7bb4-4483-afe7-6cf29cdcca68.png)
+![image](https://user-images.githubusercontent.com/88339083/129989002-ee0c46dc-eb3c-4709-847f-3aeaf49cf79e.png)
 
 
+¿Qué algoritmo de inversión cree que utiliza cada método (ver wiki)? Justifique claramente su respuesta. 
+SE CREE QUE EL MÉTODO UTILIZADO ES  EL DE VECTORES DE BASES RECÍPROCAS Y EL USO DE USO DE LA MATRIZ IDENTIDAD
 
-
-
-
-
-
-
-
+¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? Justifique su comentario en base al uso de procesadores y memoria observado durante las corridas. 
+INCIDE EN QUE EL COMPUTADOR JERAQUIZA LAS TAREAS QUE UNO LE ORDENA  Y VA REALIZANDO SEGÚN SU PRIORIDAD. POR TANTO, EL PARALELISMO PUEDE FAVORECER O PERJUDICAR EL RENDIMIENTO DEL COMPUTADOR SEGÚN LA LISTA DE "TAREAS" PENDIENTES.
