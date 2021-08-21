@@ -116,3 +116,51 @@ ambos utilizan el método gauss jordan
 
 ¿Como incide el paralelismo y la estructura de caché de su procesador en el desempeño en cada caso? Justifique su comentario en base al uso de procesadores y memoria observado durante las corridas. 
 INCIDE EN QUE EL COMPUTADOR JERAQUIZA LAS TAREAS QUE UNO LE ORDENA  Y VA REALIZANDO SEGÚN SU PRIORIDAD. POR TANTO, EL PARALELISMO PUEDE FAVORECER O PERJUDICAR EL RENDIMIENTO DEL COMPUTADOR SEGÚN LA LISTA DE "TAREAS" PENDIENTES.
+**ENTREGA P04**
+
+Tras realizar las 10 iteraciones y calcular el promedio en cada caso, se obtuvo lo siguiente:
+
+**Para las iteraciones en las que se usó un dtype=Double:
+![TIMMING DOUBLE CASO 1-2](https://user-images.githubusercontent.com/88339083/130309059-ded18877-383b-4cca-ba43-875fbd821d01.png)
+![TIMMING_DOUBLE_CASO5-6](https://user-images.githubusercontent.com/88339083/130309062-850e2985-3ec6-46a7-a499-e390960ab3af.png)
+![TIMMING_DOUBLE_CASO6-7](https://user-images.githubusercontent.com/88339083/130309063-56b72cac-aac9-4b31-8ab9-b3843b6e35bf.png)
+![TIMMING_DOUBLE_CASO2-3](https://user-images.githubusercontent.com/88339083/130309064-4451a14c-b584-4d39-beea-ad0252797da1.png)
+![TIMMING_DOUBLE_CASO3-4](https://user-images.githubusercontent.com/88339083/130309065-55a80d78-cff4-4b89-a4c3-e319a2cfd4d9.png)
+![TIMMING_DOUBLE_CASO4-5](https://user-images.githubusercontent.com/88339083/130309066-0a146ccf-6f71-4ff5-bde8-ca08daca1a96.png)
+
+**Mientras que para los casos en que se usó dtype=float32:
+
+![TIMMING_FLOAT32_CASO5-6](https://user-images.githubusercontent.com/88339083/130309083-09119c3b-ae3d-4b8f-9e5e-aff0ec254885.png)
+![TIMMING_FLOAT32_CASO6-7](https://user-images.githubusercontent.com/88339083/130309084-d8678a3f-8e78-4c99-a814-63f265cb3a96.png)
+![TIMMING_FLOAT32_CASO1-2](https://user-images.githubusercontent.com/88339083/130309085-624bde7f-f447-4c33-b849-ded4e7e735f7.png)
+![TIMMING_FLOAT32_CASO2-3](https://user-images.githubusercontent.com/88339083/130309086-f604b6d3-c3b4-4ed5-8ef3-0c437ce96b46.png)
+![TIMMING_FLOAT32_CASO3-4](https://user-images.githubusercontent.com/88339083/130309087-e4a98a30-e8f3-4a9e-99bd-cd7676503307.png)
+![TIMMING_FLOAT32_CASO4--5](https://user-images.githubusercontent.com/88339083/130309088-017bbc92-4772-45f5-be68-c576e8639256.png)
+
+Finalmente, para obtener una mayor claridad, se graficaron todos los casos en que se usó Double y float32 juntos (cada uno por separado):
+![TIMMING_CASOS_TOTALES_FLOAT32](https://user-images.githubusercontent.com/88339083/130309172-fb3e284f-e789-4a91-a4fa-c3edee3b4240.png)
+![TIMMING_CASOS_TOTALES_DOUBLE](https://user-images.githubusercontent.com/88339083/130309175-cf426d89-edd8-4120-8f9f-beacf1692cd6.png)
+
+De dónde se observa claramente que  para el caso en que se uso double fue el caso 3, probablemente porque  al imponer que la matriz es definida positiva, las opciones de resultados se reducen practicamente a la mitad. Por tanto, solo se deben evaluar los valores positivos , requeriendo menos memoria y procesamiento.
+
+Lo mismo ocurre para el caso de cuando se utilizó float32
+
+Por otro lado, utilizando la función EIGH , NUEVAMENTE ITERANDO 10 VECES Y GRAFICANDO EL PROMEDIO, SE OBTUVO LO SIGUIENTE:
+![EIGH_CASOS_TOTALES_FLOAT32](https://user-images.githubusercontent.com/88339083/130309466-c83e6822-3627-46bb-aa7f-2678a20c0229.png)
+
+
+
+![EIGH_CASOS_TOTALES_DOUBLE](https://user-images.githubusercontent.com/88339083/130309470-14f46ca3-bd21-4878-95e9-188b2a9e8957.png)
+Donde se observa que los mejores rendimientos fueron alcanzados por  el caso 7, donde se utiliza  driver evx, quien plantea un intervalo semi abierto  en el que , si los hay, solo devuelve los valores propios. Ocurre algo similar que en el caso anterior, puesto que  nuevamente estamos acotando la búsqueda de información a la función y por tanto es lógico que esta tarde menos en solucionar.
+
+El rendimiento del algoritmo dependerá de múltiples factore tales como:
+ El tamaño de la matriz (influye muchisimo) 
+ Cantidad de iteraciones 
+ Característica de la función utilizada (algunas acotan la búsqueda de soluciones)La
+ etc.
+ Mi computador utiliza sus 8 procesadores lógicos al momento de correr el programa.
+La gran diferencia en el rendimiento de  casa caso va en que tanto se restringe la busqueda de soluciones a la función. Entre mayores restricciones, menor es el tiempo que tardará en encontrarlas.
+
+
+
+
