@@ -163,4 +163,9 @@ La gran diferencia en el rendimiento de  casa caso va en que tanto se restringe 
 
 
 
+**ENTREGA P05**
+"Laplaciana"
+
+
+
 
