@@ -165,7 +165,10 @@ La gran diferencia en el rendimiento de  casa caso va en que tanto se restringe 
 
 **ENTREGA P05**
 El código utilizado para formar la matriz Laplaciana  es el siguiente:
+
+
 def Laplaciana_completa(N, tipo):
+
 	
 	e=eye(N)-eye(N,N,1)
 
