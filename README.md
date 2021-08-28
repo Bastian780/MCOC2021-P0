@@ -189,8 +189,9 @@ Luego, graficando los archivos txt generados se obtuvo lo siguiente:
 ![COMPLEJIDAD_MATMUL_COMPLETA](https://user-images.githubusercontent.com/88339083/131202890-11d17592-333c-4297-b05e-bc6f7b51d49b.png)
 Del gráfico anterior, se observa que la complejidad  del algoritmo para ensamblar las matrices y resolver la multiplicación, se ve representada por una función cuadrática
 
-2.Para el caso de matriz dispersa:
-![COMPLEJIDAD_MATMUL_DISPERSA](https://user-images.githubusercontent.com/88339083/131202897-30086329-6e98-485e-b575-7838ed4c18e3.png)
+2.Para el caso de matriz dispersa
+![COMPLEJIDAD_MATMUL_DISPERSA](https://user-images.githubusercontent.com/88339083/131204483-557c635e-abcb-402e-ab2d-9ad74a01db3d.png)
+
 Del gráfico anterior, se observa que la complejidad  del algoritmo para ensamblar las matrices y resolver la multiplicación, se ve representada por una  función constante. Lo que significa que el programa es mucho más eficiente que el anterior. Esto se debe a que se están guardando muchos menos datos que en el caso de la matriz completa, por tanto lógicamente el programa tardará menos.
 
 Además, se observa una especie de discontinuidad  al mmento de correr el programa puesto que el valor inicial  para una matriz de N pequeño tarda más que para Ns mayores. Esta anomalía corresponde a la iniciación del algoritmo( es decir cuanto se demora el programa en entrar al sistema operativo).
