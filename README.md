@@ -180,6 +180,22 @@ def Laplaciana_dispersa(N, tipo):
 
 	return(sparse.csr_matrix(tipo(e+e.T)))
 
+En las cuales se genera una matriz identidad con "eye" , a la cual se le resta otra matriz identidad con  unos en la diagonal superior  y finalmente a todo lo anterior  se le suma una  matriz identidad traspuesta.
+Este mecanismo resulta mucho más eficiente que  darle forma a la matriz laplaciana con ciclos for.
+en "def Laplaciana_dispersa" se utiliza el comando "csr_matrix"  que  a diferencia de la matriz completa , utiliza los índices iniciales y finales, por finalas para indicar las posiciones en las que existen valores dentro de la matriz que son distintos a 0 lo que es mucho más eficiente. Sin embargo, existen otra funciones aun más eficientes puesto que esta en particular incluye los valores que son 0ros y que se encuentran entre el índice inicial y final  corresponddientes a las posiciones de los valores distintos de 0.
+
+Luego, graficando los archivos txt generados se obtuvo lo siguiente:
+1. Para el caso de matriz llena:
+![COMPLEJIDAD_MATMUL_COMPLETA](https://user-images.githubusercontent.com/88339083/131202890-11d17592-333c-4297-b05e-bc6f7b51d49b.png)
+Del gráfico anterior, se observa que la complejidad  del algoritmo para ensamblar las matrices y resolver la multiplicación, se ve representada por una función cuadrática
+
+2.Para el caso de matriz dispersa:
+![COMPLEJIDAD_MATMUL_DISPERSA](https://user-images.githubusercontent.com/88339083/131202897-30086329-6e98-485e-b575-7838ed4c18e3.png)
+Del gráfico anterior, se observa que la complejidad  del algoritmo para ensamblar las matrices y resolver la multiplicación, se ve representada por una  función constante. Lo que significa que el programa es mucho más eficiente que el anterior. Esto se debe a que se están guardando muchos menos datos que en el caso de la matriz completa, por tanto lógicamente el programa tardará menos.
+
+Además, se observa una especie de discontinuidad  al mmento de correr el programa puesto que el valor inicial  para una matriz de N pequeño tarda más que para Ns mayores. Esta anomalía corresponde a la iniciación del algoritmo( es decir cuanto se demora el programa en entrar al sistema operativo).
+
+
 
 
 
