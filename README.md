@@ -195,10 +195,55 @@ Del gráfico anterior, se observa que la complejidad  del algoritmo para ensambl
 Del gráfico anterior, se observa que la complejidad  del algoritmo para ensamblar las matrices y resolver la multiplicación, se ve representada por una  función constante. Lo que significa que el programa es mucho más eficiente que el anterior. Esto se debe a que se están guardando muchos menos datos que en el caso de la matriz completa, por tanto lógicamente el programa tardará menos.
 
 Además, se observa una especie de discontinuidad  al mmento de correr el programa puesto que el valor inicial  para una matriz de N pequeño tarda más que para Ns mayores. Esta anomalía corresponde a la iniciación del algoritmo( es decir cuanto se demora el programa en entrar al sistema operativo).
+** ENTREGA 6**
+las matrices laplacianas utilizadas fueron las siguiente:
 
+Para las matrices completas-->
+def Laplaciana_completa(N, tipo):
+	
+	e=eye(N)-eye(N,N,1)
+	return tipo(e+e.T)
 
+Para la matriz disperas:
+1.- Caso de invertir matriz 
+def Laplaciana_dispersa_csc(N, tipo):
+	
+	e=eye(N)-eye(N,N,1)
 
+	return(sparse.csc_matrix(tipo(e+e.T)))
+La característica de esta función es que, con el comando sparce.csc, voy almacenando por la matriz por columna, ignorando algunos de los 0 
+2.- Caso Resolver sistema:
+def Laplaciana_dispersa_csr(N, tipo):
+	
+	e=eye(N)-eye(N,N,1)
 
+	return(sparse.csr_matrix(tipo(e+e.T)))
+La caeacterística de esta función es que con el comando sparce csr, voy almacenando la matriz por fila, ignorando algunos de los ceros
 
+Luego, generando, almacenando y graficando los archivos .txt se obtiene lo siguiente:
+
+![Inversión de matriz completa](https://user-images.githubusercontent.com/88339083/131906865-4fc8761e-1c0a-46ca-9d0e-2dd3242510cb.png)
+![Inversión de matriz dispersa](https://user-images.githubusercontent.com/88339083/131906871-474ccfbf-c932-41cb-ade5-4c7c453ab4ed.png)
+![solve con matriz dispersa](https://user-images.githubusercontent.com/88339083/131906875-a0ca70e6-2c86-492c-b230-9252141b83aa.png)
+![Solve matriz completa](https://user-images.githubusercontent.com/88339083/131906879-c34401c4-ff49-4126-9d9e-0faeef8437a5.png)
+
+Análisis:
+1.- Para los casos  de inversión, la  el uso de la matriz dispera, disminuye levemente el tiempo de inversiónn y  ensamblaje dematrices. Lo mismo ocurre para los casos de solución de sistemas(solve)
+
+2.-casos:
+   1.- Ensamblaje matriz compleja -> Asintótico a  o(n2)
+   2 .- Ensamblaje matriz dispersa-> Asintótico a  o (n)
+   3.- Inversión matriz completa .-> Asintótico a o (n2)
+   4.- Inversiónn matriz dispersa-> Asintótico a o (n)
+   5.- Solve matriz completa-> Asintótico a o(n2)
+   6.- Solve matriz dispersa->Asintótico a o ( n)
+  En sintesis, el utilizar matrices complejas reduce en almenos un grado la complejidad del algoritmo.
+  
+ 3.- El tamaño de la matriz  logicamente complejiza el trabajo, puesto que el programa debe trabajar con más datos, y por tanto con byts. Por tanto, cualquier método como sparse, facilita el proceso puesto que en gran parte de los casos, permite solo guardar los datos relevantes.  Esto se observa puesto que al observar la parte más a la derecha de los N(matrices mas grandes) la pendiente delos gráficos aumenta.
+ 
+ 4.- No siempre son estables, pero en general los resultados obtenidos utilizando la matriz dispersa son mas estables que los obtenidos con la matriz completa. La variación en el tiempo puede encontrar razon de ser debido a que quizas que cuando se corrió el programa, tambien se estaba ejecutando otra orden (musica, navegador, etc). y como el computador jerarquiza sus tareas, puede que haya encontrado otra que era más urgente que resolver el solver o la inversa.
+ 
+ 
+   
 
 
